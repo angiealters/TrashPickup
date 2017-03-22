@@ -368,7 +368,7 @@ namespace TrashPickup.Controllers
             var user = UserManager.FindById(User.Identity.GetUserId());
             if (user != null)
             {
-                return user.PhoneNumber != null;
+                return user.StreetAddress != null;
             }
             return false;
         }

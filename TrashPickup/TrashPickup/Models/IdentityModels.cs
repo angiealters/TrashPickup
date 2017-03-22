@@ -16,6 +16,7 @@ namespace TrashPickup.Models
             // Add custom user claims here
             return userIdentity;
         }
+        public string StreetAddress { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
@@ -23,10 +24,14 @@ namespace TrashPickup.Models
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
+            //public DbSet<ApplicationUser> ApplicationUser { get; set; }
+       
+
         }
 
         public static ApplicationDbContext Create()
         {
+            
             return new ApplicationDbContext();
         }
     }
