@@ -64,6 +64,7 @@ namespace TrashPickup.Models
 
     public class RegisterViewModel
     {
+        [Key]
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
@@ -82,6 +83,10 @@ namespace TrashPickup.Models
 
         [Display(Name = "Street")]
         public string StreetAddress { get; set; }
+        public string City { get; set; }
+
+
+
     }
 
     public class ResetPasswordViewModel
