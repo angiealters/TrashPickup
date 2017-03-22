@@ -91,13 +91,18 @@ namespace TrashPickup.Models
         [Required]
         public string State { get; set; }
 
-       [Required]
-       [Display(Name = "First Name ")]
+        [Required]
+        [Display(Name = "Zip Code")]
+        public int ZipCode { get; set; }
+        
+        [Required]
+       [Display(Name = "First Name")]
         public string FirstName { get; set; }
 
-
-
-
+        [Required]
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
+        
     }
 
     public class ResetPasswordViewModel

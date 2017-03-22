@@ -23,6 +23,7 @@ namespace TrashPickup.Models
         public string State { get; set; }
         public int ZipCode { get; set; }
         public string FirstName { get; set; }
+        public string LastName { get; set; }
 
     }
 
