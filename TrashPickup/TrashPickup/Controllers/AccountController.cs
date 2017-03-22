@@ -151,7 +151,7 @@ namespace TrashPickup.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, StreetAddress = model.StreetAddress, City = model.City };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, StreetAddress = model.StreetAddress, City = model.City, State = model.State };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 //var address = new ApplicationUser() { UserName = model.StreetAddress, StreetAddress = model.StreetAddress };
                 if (result.Succeeded)

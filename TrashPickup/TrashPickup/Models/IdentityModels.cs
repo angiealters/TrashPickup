@@ -20,6 +20,10 @@ namespace TrashPickup.Models
         }
         public string StreetAddress { get; set; }
         public string City { get; set; }
+        public string State { get; set; }
+        public int ZipCode { get; set; }
+        public string FirstName { get; set; }
+
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

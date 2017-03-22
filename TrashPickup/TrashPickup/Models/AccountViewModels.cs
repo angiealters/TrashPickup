@@ -81,9 +81,20 @@ namespace TrashPickup.Models
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
-        [Display(Name = "Street")]
+        [Required]
+        [Display(Name = "Street Address")]
         public string StreetAddress { get; set; }
+
+        [Required]
         public string City { get; set; }
+
+        [Required]
+        public string State { get; set; }
+
+       [Required]
+       [Display(Name = "First Name ")]
+        public string FirstName { get; set; }
+
 
 
 
