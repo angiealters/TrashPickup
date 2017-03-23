@@ -198,6 +198,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\WorkerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -228,6 +229,14 @@
     <Compile Include="Migrations\201703222036490_LastName.cs" />
     <Compile Include="Migrations\201703222036490_LastName.Designer.cs">
       <DependentUpon>201703222036490_LastName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703222107576_Password1.cs" />
+    <Compile Include="Migrations\201703222107576_Password1.Designer.cs">
+      <DependentUpon>201703222107576_Password1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703231612479_EmployeeId.cs" />
+    <Compile Include="Migrations\201703231612479_EmployeeId.Designer.cs">
+      <DependentUpon>201703231612479_EmployeeId.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -295,6 +304,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Worker\WorkerLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -328,6 +338,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703222036490_LastName.resx">
       <DependentUpon>201703222036490_LastName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703222107576_Password1.resx">
+      <DependentUpon>201703222107576_Password1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703231612479_EmployeeId.resx">
+      <DependentUpon>201703231612479_EmployeeId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

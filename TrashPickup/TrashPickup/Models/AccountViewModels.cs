@@ -102,7 +102,11 @@ namespace TrashPickup.Models
         [Required]
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
-        
+
+        [Display(Name = "Employee ID")]
+        public int EmployeeId { get; set; }
+
+
     }
 
     public class ResetPasswordViewModel
