@@ -238,6 +238,18 @@
     <Compile Include="Migrations\201703231612479_EmployeeId.Designer.cs">
       <DependentUpon>201703231612479_EmployeeId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703231959035_Role.cs" />
+    <Compile Include="Migrations\201703231959035_Role.Designer.cs">
+      <DependentUpon>201703231959035_Role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703232206078_Employee.cs" />
+    <Compile Include="Migrations\201703232206078_Employee.Designer.cs">
+      <DependentUpon>201703232206078_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703232206290_Customer.cs" />
+    <Compile Include="Migrations\201703232206290_Customer.Designer.cs">
+      <DependentUpon>201703232206290_Customer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -344,6 +356,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703231612479_EmployeeId.resx">
       <DependentUpon>201703231612479_EmployeeId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703231959035_Role.resx">
+      <DependentUpon>201703231959035_Role.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703232206078_Employee.resx">
+      <DependentUpon>201703232206078_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703232206290_Customer.resx">
+      <DependentUpon>201703232206290_Customer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
