@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TrashPickup.Migrations;
 
 namespace TrashPickup.Controllers
 {
@@ -10,7 +11,15 @@ namespace TrashPickup.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            if (User.IsInRole("Customer"))
+            {
+                return RedirectToAction("Home", "Customer");
+            }
+            if (User.IsInRole("Employee"))
+            {
+                return RedirectToAction("WorkerHome", "Worker");
+            }
+                return View();
         }
 
         public ActionResult About()

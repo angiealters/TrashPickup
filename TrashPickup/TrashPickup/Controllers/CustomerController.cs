@@ -14,6 +14,10 @@ namespace TrashPickup.Controllers
         {
             return View();
         }
+        public ActionResult Home()
+        {
+            return View();
+        }
         public ActionResult Schedule()
         {
             ViewBag.Message = "Schedule your pickup.";

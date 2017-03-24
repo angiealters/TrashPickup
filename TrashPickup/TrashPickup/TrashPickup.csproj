@@ -235,10 +235,6 @@
     <Compile Include="Migrations\201703222107576_Password1.Designer.cs">
       <DependentUpon>201703222107576_Password1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201703231612479_EmployeeId.cs" />
-    <Compile Include="Migrations\201703231612479_EmployeeId.Designer.cs">
-      <DependentUpon>201703231612479_EmployeeId.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201703231959035_Role.cs" />
     <Compile Include="Migrations\201703231959035_Role.Designer.cs">
       <DependentUpon>201703231959035_Role.cs</DependentUpon>
@@ -320,6 +316,8 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Worker\WorkerLogin.cshtml" />
     <Content Include="Views\Customer\Schedule.cshtml" />
+    <Content Include="Views\Customer\Home.cshtml" />
+    <Content Include="Views\Worker\WorkerHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -356,9 +354,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703222107576_Password1.resx">
       <DependentUpon>201703222107576_Password1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703231612479_EmployeeId.resx">
-      <DependentUpon>201703231612479_EmployeeId.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703231959035_Role.resx">
       <DependentUpon>201703231959035_Role.cs</DependentUpon>
