@@ -17,9 +17,11 @@ namespace TrashPickup.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        CustomerController customer;
 
         public AccountController()
         {
+            customer = new CustomerController();   
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )

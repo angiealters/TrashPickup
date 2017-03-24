@@ -7,11 +7,17 @@ using TrashPickup.Models;
 
 namespace TrashPickup.Controllers
 {
-    public class WorkerController : Controller
+    public class CustomerController : Controller
     {
-        // GET: Worker
+        // GET: Customer
         public ActionResult Index()
         {
+            return View();
+        }
+        public ActionResult Schedule()
+        {
+            ViewBag.Message = "Schedule your pickup.";
+
             return View();
         }
     }
