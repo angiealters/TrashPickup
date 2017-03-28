@@ -24,20 +24,20 @@ namespace TrashPickup.Models
         public int ZipCode { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public int EmployeeId { get; set; }
-
+        public string WeekDay { get; set; }
+        public string Frequency { get; set; }
 
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+               : base("DefaultConnection", throwIfV1Schema: false)
+
         {
+        }
+    //         public DbSet<RegisterViewModel> UserRegistration { get; set; }
 
-
-
-    }
 
         public static ApplicationDbContext Create()
         {
@@ -45,5 +45,7 @@ namespace TrashPickup.Models
             return new ApplicationDbContext();
         }
         public DbSet<RegisterViewModel> UserRegistration { get; set; }
+
     }
+
 }

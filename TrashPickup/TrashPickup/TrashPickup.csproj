@@ -196,7 +196,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\WorkerController.cs" />
@@ -247,9 +246,16 @@
     <Compile Include="Migrations\201703232206290_Customer.Designer.cs">
       <DependentUpon>201703232206290_Customer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703261559258_CustomerModel.cs" />
+    <Compile Include="Migrations\201703261559258_CustomerModel.Designer.cs">
+      <DependentUpon>201703261559258_CustomerModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703261618346_CustomerViewModel.cs" />
+    <Compile Include="Migrations\201703261618346_CustomerViewModel.Designer.cs">
+      <DependentUpon>201703261618346_CustomerViewModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Worker.cs" />
@@ -315,9 +321,10 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Worker\WorkerLogin.cshtml" />
-    <Content Include="Views\Customer\Schedule.cshtml" />
-    <Content Include="Views\Customer\Home.cshtml" />
     <Content Include="Views\Worker\WorkerHome.cshtml" />
+    <Content Include="Views\Account\CustomerHome.cshtml" />
+    <Content Include="Views\Account\CustomerSchedule.cshtml" />
+    <Content Include="Views\Worker\WorkerMap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -363,6 +370,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703232206290_Customer.resx">
       <DependentUpon>201703232206290_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703261559258_CustomerModel.resx">
+      <DependentUpon>201703261559258_CustomerModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703261618346_CustomerViewModel.resx">
+      <DependentUpon>201703261618346_CustomerViewModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

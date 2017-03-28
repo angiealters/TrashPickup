@@ -13,7 +13,7 @@ namespace TrashPickup.Controllers
         {
             if (User.IsInRole("Customer"))
             {
-                return RedirectToAction("Home", "Customer");
+                return RedirectToAction("CustomerHome", "Account");
             }
             if (User.IsInRole("Employee"))
             {

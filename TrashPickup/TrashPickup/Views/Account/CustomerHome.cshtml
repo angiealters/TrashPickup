@@ -1,5 +1,7 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@using TrashPickup.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "CustomerHome";
 }
 
 <div class="jumbotron">
@@ -13,7 +15,7 @@
         <p>
             Select what day you would like your trash picked up. You can also choose the frequency of pickup.
         </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <p>@Html.ActionLink("Schedule now!", "CustomerSchedule")</p>
     </div>
     <div class="col-md-4">
         <h2>Suspend Services</h2>
@@ -26,4 +28,3 @@
         <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
 </div>
-

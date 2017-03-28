@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using TrashPickup.Models;
+using System.Data.Entity;
 
 namespace TrashPickup.Controllers
 {
@@ -17,17 +18,29 @@ namespace TrashPickup.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
-        CustomerController customer;
+        private ApplicationDbContext _context;
 
         public AccountController()
         {
-            customer = new CustomerController();   
+
         }
 
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
+        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager, ApplicationDbContext context)
         {
             UserManager = userManager;
             SignInManager = signInManager;
+            Context = context;
+        }
+        public ApplicationDbContext Context
+        {
+            get
+            {
+                return _context ?? HttpContext.GetOwinContext().Get<ApplicationDbContext>();
+            }
+            private set
+            {
+                _context = value;
+            }
         }
 
         public ApplicationSignInManager SignInManager
@@ -92,6 +105,29 @@ namespace TrashPickup.Controllers
                     return View(model);
             }
         }
+        public ActionResult CustomerHome()
+        {
+            return View();
+        }
+        public ActionResult CustomerSchedule()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Update(ApplicationUser user)
+        {
+            var userInDb = user.Id;
+            //var userInDb = _context.Users.Single(u => u.Id == user.Id);
+             
+            TryUpdateModel(userInDb);
+            //user.Frequency = user.Frequency;
+
+            _context.SaveChanges();
+
+            return Content("Success");
+
+            
+        }
 
         //
         // GET: /Account/VerifyCode
@@ -155,7 +191,6 @@ namespace TrashPickup.Controllers
             {
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email, StreetAddress = model.StreetAddress, City = model.City, State = model.State, ZipCode = model.ZipCode, FirstName = model.FirstName, LastName = model.LastName };
                 var result = await UserManager.CreateAsync(user, model.Password);
-                //var address = new ApplicationUser() { UserName = model.StreetAddress, StreetAddress = model.StreetAddress };
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
