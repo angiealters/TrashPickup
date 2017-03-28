@@ -1,0 +1,21 @@
+﻿@model TrashPickup.Models.ApplicationUser
+
+@{
+    ViewBag.Title = "Confirmation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Schedule Confirmation</h2>
+
+@using (Html.BeginForm("Confirmation", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <h5>You have successfully set your trash pickup schedule!</h5>
+    <h5>If you ever need to change your schedule, go back to the schedule page.</h5>
+    <hr />
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

@@ -1,0 +1,22 @@
+﻿@model TrashPickup.Models.ApplicationUser
+@{
+    ViewBag.Title = "SuspensionConfirmation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Suspension Confirmed</h2>
+
+@using (Html.BeginForm("SuspensionConfirmation", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <h5>You have successfully suspended your services!</h5>
+    <h5>If you ever need to change your suspension dates, go back to the suspend page.</h5>
+    <hr />
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+
+

@@ -100,33 +100,67 @@ namespace TrashPickup.Controllers
         }
         public ActionResult CustomerSchedule()
         {
-            //var userId = User.Identity.GetUserId();
-            //var user = new ApplicationUser()
-            //{
-            //    Id = userId
-            //};
             return View();
         }
         [HttpPost]
         public ActionResult Update(ApplicationUser user)
         {
-
-            //var userInDb = _context.Users.Where(m => m.Id == User.Identity.GetUserId());
             var userId = User.Identity.GetUserId();
             var userInDb = _context.Users.Single(m => m.Id == userId);
             userInDb.WeekDay = user.WeekDay;
             userInDb.Frequency = user.Frequency;
-            
-            //TryUpdateModel(appUser, "", new string[] { "WeekDay", "Frequency" });
 
             _context.SaveChanges();
 
-            return View("CustomerSchedule");
-           
-            
+            return View("Confirmation");            
         }
+        public ActionResult Confirmation()
+        {
+            return View();
+        }
+        public ActionResult SuspendService()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Save(ApplicationUser user)
+        {
+            var userId = User.Identity.GetUserId();
+            var userInDb = _context.Users.Single(m => m.Id == userId);
+            userInDb.SuspendStartDate = user.SuspendStartDate;
+            userInDb.SuspendEndDate = user.SuspendEndDate;
 
-        //
+            _context.SaveChanges();
+
+            return View("SuspensionConfirmation");
+        }
+        public ActionResult SuspensionConfirmation()
+        {
+            return View();
+        }
+        public ActionResult Invoice(ApplicationUser user)
+        {
+            var userId = User.Identity.GetUserId();
+            var userInDb = _context.Users.Single(m => m.Id == userId);
+
+            if (userInDb.Frequency.Equals("Weekly"))
+            {
+                return RedirectToAction("WeeklyInvoice", "Account");
+            }
+            if (userInDb.Frequency.Equals("Bi-Weekly"))
+            {
+                return RedirectToAction("BiWeeklyInvoice", "Account");
+            }
+            return View();
+        }
+        public ActionResult WeeklyInvoice()
+        {
+            return View();
+        }
+        public ActionResult BiWeeklyInvoice()
+        {
+            return View();
+        }
         // GET: /Account/VerifyCode
         [AllowAnonymous]
         public async Task<ActionResult> VerifyCode(string provider, string returnUrl, bool rememberMe)

@@ -26,6 +26,10 @@ namespace TrashPickup.Models
         public string LastName { get; set; }
         public string WeekDay { get; set; }
         public string Frequency { get; set; }
+        public string SuspendStartDate { get; set; }
+        public string SuspendEndDate { get; set; }
+
+
 
     }
 

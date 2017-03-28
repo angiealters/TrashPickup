@@ -1,5 +1,5 @@
-﻿@using TrashPickup.Models
-@model LoginViewModel
+﻿@model TrashPickup.Models.ApplicationUser
+
 @{
     ViewBag.Title = "CustomerHome";
 }
@@ -20,11 +20,11 @@
     <div class="col-md-4">
         <h2>Suspend Services</h2>
         <p>You can choose dates to skip if you are on vacation, and you won't be charged for services.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <p>@Html.ActionLink("Select Dates", "SuspendService")</p>
     </div>
     <div class="col-md-4">
         <h2>Invoice</h2>
         <p>You can view how much you owe this month for pickups.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <p>@Html.ActionLink("View Invoice", "Invoice")</p>
     </div>
 </div>

@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Invoice";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Invoice</h2>
+
+@using (Html.BeginForm("WeeklyInvoice", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <h5>You owe $20.00 for services this month.</h5>
+    <h5>To pay, you can either mail a check or visit our facility.</h5>
+    <hr />
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

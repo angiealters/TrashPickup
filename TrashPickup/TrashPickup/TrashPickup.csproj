@@ -262,6 +262,10 @@
     <Compile Include="Migrations\201703281403213_UpdatingModels.Designer.cs">
       <DependentUpon>201703281403213_UpdatingModels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703282059315_SuspendDates.cs" />
+    <Compile Include="Migrations\201703282059315_SuspendDates.Designer.cs">
+      <DependentUpon>201703282059315_SuspendDates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -333,6 +337,12 @@
     <Content Include="Views\Account\CustomerHome.cshtml" />
     <Content Include="Views\Account\CustomerSchedule.cshtml" />
     <Content Include="Views\Worker\WorkerMap.cshtml" />
+    <Content Include="Views\Account\Confirmation.cshtml" />
+    <Content Include="Views\Worker\WorkerSchedule.cshtml" />
+    <Content Include="Views\Account\SuspendService.cshtml" />
+    <Content Include="Views\Account\SuspensionConfirmation.cshtml" />
+    <Content Include="Views\Account\WeeklyInvoice.cshtml" />
+    <Content Include="Views\BiWeeklyInvoice.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -390,6 +400,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703281403213_UpdatingModels.resx">
       <DependentUpon>201703281403213_UpdatingModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703282059315_SuspendDates.resx">
+      <DependentUpon>201703282059315_SuspendDates.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

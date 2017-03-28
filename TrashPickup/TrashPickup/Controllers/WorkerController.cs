@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -21,6 +23,15 @@ namespace TrashPickup.Controllers
         public ActionResult WorkerMap()
         {
             return View();
+        }
+        public ActionResult WorkerSchedule(ApplicationUser user)
+        {
+            //    var user = new ApplicationUser();
+            var userId = User.Identity.GetUserId();
+            var customer = new List<ApplicationUser>();
+            
+            
+            return View(customer);
         }
     }
 }

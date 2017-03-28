@@ -105,15 +105,15 @@ namespace TrashPickup.Models
 
         [Display(Name = "Select Frequency")]
         public string Frequency { get; set; }
-    }
-    //public class ScheduleViewModel
-    //{
-    //    [Display(Name = "Select Day")]
-    //    public string WeekDay { get; set; }
 
-    //    [Display(Name = "Select Frequency")]
-    //    public string Frequency { get; set; }
-    //}
+        [Display(Name = "Start Date:")]
+        public string SuspendStartDate { get; set; }
+
+        [Display(Name = "End Date:")]
+        public string SuspendEndDate { get; set; }
+
+
+    }
 
     public class ResetPasswordViewModel
     {
