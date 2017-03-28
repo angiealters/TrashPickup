@@ -254,6 +254,14 @@
     <Compile Include="Migrations\201703261618346_CustomerViewModel.Designer.cs">
       <DependentUpon>201703261618346_CustomerViewModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703280134344_updatecustomer.cs" />
+    <Compile Include="Migrations\201703280134344_updatecustomer.Designer.cs">
+      <DependentUpon>201703280134344_updatecustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703281403213_UpdatingModels.cs" />
+    <Compile Include="Migrations\201703281403213_UpdatingModels.Designer.cs">
+      <DependentUpon>201703281403213_UpdatingModels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -376,6 +384,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703261618346_CustomerViewModel.resx">
       <DependentUpon>201703261618346_CustomerViewModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703280134344_updatecustomer.resx">
+      <DependentUpon>201703280134344_updatecustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703281403213_UpdatingModels.resx">
+      <DependentUpon>201703281403213_UpdatingModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

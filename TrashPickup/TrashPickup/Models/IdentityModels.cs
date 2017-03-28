@@ -33,18 +33,15 @@ namespace TrashPickup.Models
     {
         public ApplicationDbContext()
                : base("DefaultConnection", throwIfV1Schema: false)
-
         {
+
         }
-    //         public DbSet<RegisterViewModel> UserRegistration { get; set; }
 
 
         public static ApplicationDbContext Create()
-        {
-            
+        {            
             return new ApplicationDbContext();
         }
-        public DbSet<RegisterViewModel> UserRegistration { get; set; }
 
     }
 

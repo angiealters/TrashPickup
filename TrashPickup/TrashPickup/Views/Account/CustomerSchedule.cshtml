@@ -1,4 +1,5 @@
-﻿@model TrashPickup.Models.ScheduleViewModel
+﻿@model TrashPickup.Models.ApplicationUser
+
 @{
     ViewBag.Title = "Schedule";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -30,12 +31,13 @@
             <input type="radio" name="Frequency" value="Bi-Weekly"> Bi-Weekly<br>
         </div>
     </div>
-    <br>
+
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" class="btn btn-default" value="Schedule" />
         </div>
     </div>
+
 }
 
 @section Scripts {

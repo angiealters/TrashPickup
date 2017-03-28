@@ -18,29 +18,18 @@ namespace TrashPickup.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
-        private ApplicationDbContext _context;
-
+        private ApplicationDbContext _context = new ApplicationDbContext();
+        
         public AccountController()
         {
 
         }
 
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager, ApplicationDbContext context)
+        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
         {
             UserManager = userManager;
             SignInManager = signInManager;
-            Context = context;
-        }
-        public ApplicationDbContext Context
-        {
-            get
-            {
-                return _context ?? HttpContext.GetOwinContext().Get<ApplicationDbContext>();
-            }
-            private set
-            {
-                _context = value;
-            }
+          
         }
 
         public ApplicationSignInManager SignInManager
@@ -111,21 +100,29 @@ namespace TrashPickup.Controllers
         }
         public ActionResult CustomerSchedule()
         {
+            //var userId = User.Identity.GetUserId();
+            //var user = new ApplicationUser()
+            //{
+            //    Id = userId
+            //};
             return View();
         }
         [HttpPost]
         public ActionResult Update(ApplicationUser user)
         {
-            var userInDb = user.Id;
-            //var userInDb = _context.Users.Single(u => u.Id == user.Id);
-             
-            TryUpdateModel(userInDb);
-            //user.Frequency = user.Frequency;
+
+            //var userInDb = _context.Users.Where(m => m.Id == User.Identity.GetUserId());
+            var userId = User.Identity.GetUserId();
+            var userInDb = _context.Users.Single(m => m.Id == userId);
+            userInDb.WeekDay = user.WeekDay;
+            userInDb.Frequency = user.Frequency;
+            
+            //TryUpdateModel(appUser, "", new string[] { "WeekDay", "Frequency" });
 
             _context.SaveChanges();
 
-            return Content("Success");
-
+            return View("CustomerSchedule");
+           
             
         }
 

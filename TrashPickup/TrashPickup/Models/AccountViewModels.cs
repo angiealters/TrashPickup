@@ -99,15 +99,21 @@ namespace TrashPickup.Models
         [Required]
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
-    }
-    public class ScheduleViewModel
-    {
+
         [Display(Name = "Select Day")]
         public string WeekDay { get; set; }
 
         [Display(Name = "Select Frequency")]
         public string Frequency { get; set; }
     }
+    //public class ScheduleViewModel
+    //{
+    //    [Display(Name = "Select Day")]
+    //    public string WeekDay { get; set; }
+
+    //    [Display(Name = "Select Frequency")]
+    //    public string Frequency { get; set; }
+    //}
 
     public class ResetPasswordViewModel
     {
