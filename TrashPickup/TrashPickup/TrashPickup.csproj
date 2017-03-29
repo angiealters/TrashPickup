@@ -342,7 +342,7 @@
     <Content Include="Views\Account\SuspendService.cshtml" />
     <Content Include="Views\Account\SuspensionConfirmation.cshtml" />
     <Content Include="Views\Account\WeeklyInvoice.cshtml" />
-    <Content Include="Views\BiWeeklyInvoice.cshtml" />
+    <Content Include="Views\Account\BiWeeklyInvoice.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
